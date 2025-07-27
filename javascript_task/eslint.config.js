@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     files: ["**/*.js"],
     languageOptions: {
@@ -11,8 +11,8 @@ module.exports = [
       },
     },
     plugins: {
-      jest: require("eslint-plugin-jest"),
-      prettier: require("eslint-plugin-prettier"),
+      jest: await import("eslint-plugin-jest"),
+      prettier: await import("eslint-plugin-prettier"),
     },
     rules: {
       "no-console": "warn",
@@ -29,10 +29,10 @@ module.exports = [
   {
     files: ["**/__tests__/**/*.js", "**/?(*.)+(spec|test).js"],
     plugins: {
-      jest: require("eslint-plugin-jest"),
+      jest: await import("eslint-plugin-jest"),
     },
     rules: {
-      ...require("eslint-plugin-jest").configs.recommended.rules,
+      ...(await import("eslint-plugin-jest")).configs.recommended.rules,
     },
   },
 ];

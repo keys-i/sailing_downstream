@@ -1,4 +1,4 @@
-const processList = require("./main");
+import processList from "./main";
 
 describe("processList Function Tests", () => {
   test("Valid input list of length 20", () => {
