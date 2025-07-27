@@ -1,26 +1,24 @@
 (lang dune 2.9)
-
 (name ocaml_task)
-
 (generate_opam_files true)
 
-(source
- (github username/reponame))
+(source (github username/reponame))
 
-(authors "Author Name")
+(authors "Keys")
+(maintainers "Keys")
 
-(maintainers "Maintainer Name")
-
-(license LICENSE)
-
-(documentation https://url/to/documentation)
+(license MIT)
+(documentation "https://url/to/documentation")
 
 (package
  (name ocaml_task)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune)
+ (synopsis "A simple OCaml application with a guessing game")
+ (description "An OCaml project demonstrating basic module structure, Dune configuration, and test integration.")
+ (depends
+  "ocaml"
+  ("dune" (>= 2.9))
+  "ounit2")
  (tags
-  (topics "to describe" your project)))
+  ("ocaml" "dune" "guessing-game" "example" "educational")))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
